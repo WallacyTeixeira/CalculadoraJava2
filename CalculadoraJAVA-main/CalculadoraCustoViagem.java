@@ -14,6 +14,7 @@ public class CalculadoraCustoViagem extends JPanel {
 
         // Criação dos painéis para os botões numéricos
         JPanel painel1 = new JPanel();
+        painel1.setBackground(Color.gray);
 
         // Adiciona os painéis ao JFrame em posições específicas
         frame.add(painel1, BorderLayout.SOUTH); // Adiciona o painel1 à esquerda do JFrame
@@ -22,7 +23,7 @@ public class CalculadoraCustoViagem extends JPanel {
         painel1.setLayout(new BoxLayout(painel1, BoxLayout.X_AXIS)); // Define layout vertical para o painel1
         
         // Adiciona botões numéricos aos painéis de botões numéricos
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 18; i++) {
             painel1.add(new JButton("" + (i + 1))); // Adiciona botões de 1 a 10 ao painel1
         }
 
@@ -31,22 +32,25 @@ public class CalculadoraCustoViagem extends JPanel {
         JLabel distanciaLabel = new JLabel("Distância (km):"); // Criação de um rótulo para a distância
         JTextField distanciaTextField = new JTextField(5); // Criação de um campo de texto para a distância
         distanciaTextField.setFont(new Font("Arial", 0, 25)); // Define a fonte do campo de texto
+        inputPanelRight.setBackground(Color.gray);
 
         inputPanelRight.add(distanciaLabel); // Adiciona o rótulo ao painel
         inputPanelRight.add(distanciaTextField); // Adiciona o campo de texto ao painel
 
         JPanel inputPanelLeft = new JPanel(new FlowLayout(FlowLayout.LEFT)); // Criação de um painel com layout à esquerda
-        JLabel precoLabel = new JLabel("Preço por litro:"); // Criação de um rótulo para o preço por litro
+        JLabel precoLabel = new JLabel("Preço por litro (R$):"); // Criação de um rótulo para o preço por litro
         JTextField precoTextField = new JTextField(5); // Criação de um campo de texto para o preço por litro
         precoTextField.setFont(new Font("Arial", 0, 25)); // Define a fonte do campo de texto
+        inputPanelLeft.setBackground(Color.gray);
 
         inputPanelLeft.add(precoLabel); // Adiciona o rótulo ao painel
         inputPanelLeft.add(precoTextField); // Adiciona o campo de texto ao painel
 
         JPanel inputPanelCenter = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Criação de um painel com layout centralizado
-        JLabel consumoLabel = new JLabel("Consumo por litro:"); // Criação de um rótulo para o consumo por litro
+        JLabel consumoLabel = new JLabel("Consumo por litro(L/Km):"); // Criação de um rótulo para o consumo por litro
         JTextField consumoTextField = new JTextField(5); // Criação de um campo de texto para o consumo por litro
         consumoTextField.setFont(new Font("Arial", 0, 25)); // Define a fonte do campo de texto
+        inputPanelCenter.setBackground(Color.gray);
 
         inputPanelCenter.add(consumoLabel); // Adiciona o rótulo ao painel
         inputPanelCenter.add(consumoTextField); // Adiciona o campo de texto ao painel
@@ -63,6 +67,7 @@ public class CalculadoraCustoViagem extends JPanel {
         // Criação do rótulo para mostrar o resultado do cálculo
         JLabel resultadoValor = new JLabel(""); // Criação de um rótulo vazio
         resultadoValor.setFont(new Font("Arial", 0, 30)); // Define a fonte do rótulo
+        buttonPanel.setBackground(Color.green);
 
         buttonPanel.add(resultadoValor); // Adiciona o rótulo de resultado ao painel
 
